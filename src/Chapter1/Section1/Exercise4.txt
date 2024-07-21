@@ -1,0 +1,11 @@
+a)if (a > b) then c = 0;
+"then" is not valid syntax in Java.
+
+b) if a > b { c = 0; }
+Parentheses are required surrounding the conditional "a > b".
+
+c) if (a > b) c = 0;
+Correct.
+
+d) if (a > b) c = 0 else b = 0;
+Semi-colon required after "c = 0" declaration.

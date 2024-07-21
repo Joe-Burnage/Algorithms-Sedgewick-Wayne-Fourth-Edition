@@ -1,0 +1,8 @@
+■ Print the maximum and minimum numbers. - filter possible
+■ Print the median of the numbers. - save required
+■ Print the k th smallest value, for k less than 100. - filter possible
+■ Print the sum of the squares of the numbers. - filter possible
+■ Print the average of the N numbers. - filter possible
+■ Print the percentage of numbers greater than the average. - save required
+■ Print the N numbers in increasing order. - save required
+■ Print the N numbers in random order. - save required

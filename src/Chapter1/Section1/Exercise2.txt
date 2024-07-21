@@ -1,0 +1,16 @@
+a)
+Input: (1 + 2.236) / 2
+Expected: 1.618, type: double
+Actual:   1.618, type: Double
+b)
+Input: 1 + 2 + 3 + 4.0
+Expected: 10.0, type: double
+Actual:   10.0, type: Double
+c)
+Input: 4.1 >= 4
+Expected: true, type: boolean
+Actual:   true, type: Boolean
+d)
+Input: 1 + 2 + "3"
+Expected: 33, type: String
+Actual:   33, type: String

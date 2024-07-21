@@ -1,0 +1,12 @@
+a)
+Expression:  System.out.println('b')
+Output:      b
+Explanation: Prints the character 'b'.
+b)
+Expression:  System.out.println('b' + 'c')
+Output:      197
+Explanation: Sums the character values for b (98) and c(99), giving 197.
+c)
+Expression:  System.out.println('a' + 4)
+Output:      e
+Explanation: Adds 4 to the character value for a (97), and prints the character with value 101 (e).

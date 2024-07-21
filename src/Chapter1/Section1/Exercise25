@@ -1,0 +1,67 @@
+Given two non-negative integers a and b with a ≥ b, the Euclidean algorithm computes gcd(a,b) by recursively performing the following steps until b=0:
+
+
+1.  If b=0,    return a as gcd(a, b).
+2.  Otherwise, compute gcd(b, a  mod b).
+
+Inductive Proof
+
+We aim to prove that gcd(a, b)=gcd(b, a  mod b).
+
+Base Case:
+
+Consider b=0.
+
+    According to the algorithm, gcd(a,0)=a.
+    By the definition of GCD, gcd(a,0)=a because any number is a divisor of zero, and the largest number that divides a and 0 is a.
+
+Inductive Step:
+
+Assume that for some integers a and b, gcd(a, b)=gcd(b, a  mod b).
+
+We need to show that this holds for gcd(b, a  mod b) as well.
+
+Let:
+
+    d  = gcd(a, b)
+    d′ = gcd(b, a  mod b)
+
+We must show d = d′.
+
+Proof:
+
+    By definition, d is the greatest common divisor of a and b, meaning d∣a and d∣b.
+
+    Since d∣a and d∣b, we can write a and b as:
+        a = k * d for some integer k
+        b = l * d for some integer l
+
+    Consider the expression a  mod b:
+    a  mod b = a − ⌊ a / b ⌋ b
+
+    Substituting a=kd and b=ld into the equation, we get:
+    a  mod b = kd − ⌊ k * d / l * d ⌋ (l * d)
+    a  mod b = kd −     ⌊ k / l ⌋     (l * d)
+
+    Since ⌊ k / l ⌋ is an integer, let m=⌊ k / l ⌋.
+
+    Then:
+    a  mod b = k * d − m (l * d)
+    a  mod b = k * d − m * l * d
+    a  mod b = d (k − m * l)
+
+    This shows that a  mod b is a multiple of d:
+
+    Therefore, d divides a  mod b.
+
+    By the definition of d′, d′ is the greatest common divisor of b and a  mod b.
+    Since d divides both b and a  mod b, d must also divide their greatest common divisor, i.e., d divides d′.
+
+    Similarly, d′ is a common divisor of b and a  mod b, and since a = q * b + (a  mod b) for some integer q,
+    d′ also divides a. Thus, d′ must divide their greatest common divisor, i.e., d′∣d.
+
+    Since d∣d′ and d′∣d, it follows that d=d′.
+
+Therefore, gcd(a,b)=gcd(b,a  mod b).
+
+By the principle of mathematical induction, the Euclidean algorithm correctly computes the GCD of two non-negative integers a and b.

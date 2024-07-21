@@ -1,0 +1,27 @@
+if (a > b) { t = a; a = b; b = t; }
+if (a > c) { t = a; a = c; c = t; }
+if (b > c) { t = b; b = c; c = t; }
+
+The above code puts a, b, and c in ascending order.
+
+A temporary variable 't', is used to swap the values if a larger value is ordered before a smaller one.
+
+e.g. if we have the values a = 5, b = 1, c = 3, the code fragment would perform the actions as follows.
+
+if (a (5) > b (1)) //true
+t = a // 5
+a = b // 1
+b = t // 5
+
+Our values are now a = 1, b = 5, c = 3.
+
+if (a (1) > c (3)) // false
+
+if (b (5) > c (3)) // true
+t = b // 5
+b = c // 3
+c = t // 5
+
+Our values are now a = 1, b = 3, c = 5.
+
+The values have, as expected, put the values in ascending order.

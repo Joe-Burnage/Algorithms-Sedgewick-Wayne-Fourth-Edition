@@ -1,0 +1,12 @@
+a)
+Input:    (0 + 15) / 2)
+Expected: 7
+Actual:   7
+b)
+Input:    2.0e-6 * 100000000.1
+Expected: 200.0000002
+Actual:   200.0000002
+c)
+Input:    true && false || true && true
+Expected: true
+Actual:   true

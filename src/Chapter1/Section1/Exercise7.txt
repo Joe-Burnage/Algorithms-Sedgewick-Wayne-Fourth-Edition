@@ -1,0 +1,9 @@
+a)
+Uses Newton's method to approximate the square root of 9.
+Output: 3.00009
+b)
+Sums the numbers from 1 to 999.
+Output: 499500
+c)
+Sums the powers of 2 between 1 and 999.
+Output: 1023
