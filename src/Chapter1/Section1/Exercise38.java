@@ -4,6 +4,8 @@ import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
+import java.util.Arrays;
+
 public class Exercise38
 {
   public static int bruteForceSearch(int key, int[] a)
@@ -30,9 +32,12 @@ public class Exercise38
   public static void main(String[] args)
   {
     int[] whitelist = new In(args[0]).readAllInts();
+    Arrays.sort(whitelist);
     while (StdIn.hasNextLine())
     {
-      int key = Integer.parseInt(StdIn.readLine());
+      String line = StdIn.readLine();
+      if (line.isEmpty()) break;
+      int key = Integer.parseInt(line);
       final long startTime1 = System.nanoTime();
       int result1 = binarySearch(key, whitelist);
       final long endTime1 = System.nanoTime();
@@ -52,7 +57,6 @@ public class Exercise38
               """,
           result1, (double) (endTime1 - startTime1) / 1000000000.0,
           result2, (double) (endTime2 - startTime2) / 1000000000.0);
-
     }
   }
 }
