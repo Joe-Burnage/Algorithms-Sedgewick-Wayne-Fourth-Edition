@@ -1,0 +1,7 @@
+Suppose that a[] and b[] are each integer arrays consisting of millions of
+integers. What does the follow code do? Is it reasonably efficient?
+int[] t = a; a = b; b = t;
+
+The code fragment swaps the integer arrays a[] and b[].
+It is efficient as it does not handle the elements in the array, only the
+reference values. The size of the arrays is irrelevant.
