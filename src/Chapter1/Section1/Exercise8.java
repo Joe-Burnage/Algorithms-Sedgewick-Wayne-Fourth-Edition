@@ -1,5 +1,12 @@
 package Chapter1.Section1;
 
+/*
+What do each of the following print?
+a. System.out.println('b');
+b. System.out.println('b' + 'c');
+c. System.out.println((char) ('a' + 4));
+Explain each outcome.
+*/
 public class Exercise8
 {
   public static void main(String[] args)

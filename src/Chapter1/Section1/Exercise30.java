@@ -1,7 +1,11 @@
 package Chapter1.Section1;
 
 import edu.princeton.cs.algs4.StdOut;
-
+/*
+Array exercise. Write a code fragment that creates an N-by-N boolean array
+a[][] such that a[i][j] is true if i and j are relatively prime (have no common fac-
+tors), and false otherwise.
+*/
 public class Exercise30
 {
   public static int gcd(int p, int q)

@@ -2,6 +2,11 @@ package Chapter1.Section1;
 
 import edu.princeton.cs.algs4.StdOut;
 
+/*
+Write a code fragment to print the transposition (rows and columns changed)
+of a two-dimensional array with M rows and N columns.
+*/
+
 public class Exercise13
 {
   public static void printTransposition(int[][] a){

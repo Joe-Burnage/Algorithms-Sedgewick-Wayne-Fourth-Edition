@@ -1,7 +1,10 @@
 package Chapter1.Section1;
 
 import edu.princeton.cs.algs4.StdOut;
-
+/*
+Write a program that takes three integer command-line arguments and prints
+equal if all three are equal, and not equal otherwise.
+*/
 public class Exercise3
 {
   public static void main(String[] args)

@@ -1,7 +1,10 @@
 package Chapter1.Section1;
 
 import edu.princeton.cs.algs4.StdOut;
-
+/*
+Write a code fragment that puts the binary representation of a positive integer N
+into a String s.
+*/
 public class Exercise9
 {
   public static String integerToBinaryString(int N){

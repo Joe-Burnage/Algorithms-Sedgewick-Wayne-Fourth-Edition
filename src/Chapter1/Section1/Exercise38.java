@@ -5,7 +5,11 @@ import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 import java.util.Arrays;
-
+/*
+Binary search versus brute-force search. Write a program BruteForceSearch
+that uses the brute-force search method given on page 48 and compare its running time
+on your computer with that of BinarySearch for largeW.txt and largeT.txt.
+*/
 public class Exercise38
 {
   public static int bruteForceSearch(int key, int[] a)

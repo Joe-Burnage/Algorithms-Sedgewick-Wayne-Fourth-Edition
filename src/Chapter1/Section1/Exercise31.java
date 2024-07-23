@@ -3,12 +3,21 @@ package Chapter1.Section1;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdRandom;
 
+import java.awt.*;
+
+/*
+Random connections. Write a program that takes as command-line arguments
+an integer N and a double value p (between 0 and 1), plots N equally spaced dots of size
+.05 on the circumference of a circle, and then, with probability p for each pair of points,
+draws a gray line connecting them.
+*/
 public class Exercise31
 {
   public static void main(String[] args)
   {
     StdDraw.setCanvasSize(1024, 1024);
     StdDraw.setPenRadius(0.005);
+    StdDraw.setPenColor(Color.gray);
     int N = Integer.parseInt(args[0]);
     double p = Double.parseDouble(args[1]);
     double[][] coords = new double[N][2];

@@ -1,7 +1,11 @@
 package Chapter1.Section1;
 
 import edu.princeton.cs.algs4.StdOut;
-
+/*
+Write a code fragment that prints the contents of a two-dimensional boolean
+array, using * to represent true and a space to represent false. Include row and column
+numbers.
+*/
 public class Exercise11
 {
   public static void printBooleanArray(boolean[][] array)

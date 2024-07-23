@@ -5,7 +5,10 @@ import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 import java.util.Arrays;
-
+/*
+Remove duplicates. Modify the test client in BinarySearch to remove any
+duplicate keys in the whitelist after the sort.
+*/
 public class Exercise28
 {
   public static int rank(int key, int[] a)

@@ -1,3 +1,6 @@
+Use mathematical induction to prove that Euclid’s algorithm computes the
+greatest common divisor of any pair of non-negative integers p and q.
+
 Given two non-negative integers a and b with a ≥ b, the Euclidean algorithm computes gcd(a,b) by recursively performing the following steps until b=0:
 
 
