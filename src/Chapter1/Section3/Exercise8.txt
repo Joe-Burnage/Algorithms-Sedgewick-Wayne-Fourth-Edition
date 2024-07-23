@@ -1,0 +1,24 @@
+Give the contents and size of the array for DoublingStackOfStrings
+with the input:
+it was - the best - of times - - - it was - the - -
+
+Size:   1   |   it
+Size:   2   |   it      was
+Size:   2   |   it      null
+Size:   2   |   it      the
+Size:   4   |   it      the     best    null
+Size:   4   |   it      the     null    null
+Size:   4   |   it      the     of      null
+Size:   4   |   it      the     of      times
+Size:   4   |   it      the     of      null
+Size:   4   |   it      the     null    null
+Size:   2   |   it      null                    (content size was 1/4 of max)
+Size:   2   |   it      it
+Size:   4   |   it      it      was     null
+Size:   4   |   it      it      null    null
+Size:   4   |   it      it      the     null
+Size:   4   |   it      it      null    null
+Size:   2   |   it      null
+
+Final contents:       it
+Final array size:     2

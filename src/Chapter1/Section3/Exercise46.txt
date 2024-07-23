@@ -1,0 +1,17 @@
+Forbidden triple for stack generability. Prove that a permutation can be generated
+by a stack (as in the previous question) if and only if it has no forbidden triple (a, b,
+c) such that a < b < c with c first, a second, and b third (possibly with other intervening
+integers between c and a and between a and b).
+
+Suppose that there is a forbidden triple (a, b, c). Item c is popped before a and b,
+but a and b are pushed before c. Thus, when c is pushed, both a and b are on
+the stack. Therefore, a cannot be popped before b.
+
+For example, if a = 1, b = 2, c = 3
+
+To have a stack where we can pop c, we must push everything up to and including c.
+Stack: 3 2 1
+If we pop c, we are left with the stack
+2 1
+We cannot pop a before b, thus the permutation 3 1 2 is impossible, as it contains
+a forbidden triple.

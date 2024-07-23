@@ -1,0 +1,6 @@
+Queue with three stacks. Implement a queue with three stacks so that each
+queue operation takes a constant (worst-case) number of stack operations. Warning :
+high degree of difficulty.
+
+Exercise passed as there is no known solution which conforms to all the above
+constraints, confirmed by Prof. Sedgewick.
