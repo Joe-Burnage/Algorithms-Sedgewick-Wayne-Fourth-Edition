@@ -1,0 +1,13 @@
+Develop a table like the one on page 181 for TwoSum.
+
+Statement     Time in            Frequency                  Total time
+  block       seconds
+═════════════════════════════════════════════════════════════════════════════
+    D           t0         x (depends on input)                 t0x
+    C           t1                N^2 / 2                   t1(N^2 / 2)
+    B           t2                   N                          t2N
+    A           t3                   1                          t3
+
+Total time: t1(N^2 / 2) + t2N + t3 + t0x
+Tilde approximation (assuming x is small) ~(t1/2)N^2
+Order of growth: N^2

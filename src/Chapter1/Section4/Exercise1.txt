@@ -1,0 +1,48 @@
+Show that the number of different triples that can be chosen from N items is
+precisely N (N - 1) (N - 2) / 6. Hint : Use mathematical induction.
+
+Base case:
+N = 3
+
+There is only one way to choose a triple from three items.
+3 * 2 * 1 / 6 = 1
+
+The base case holds.
+
+Induction Hypothesis:
+Assume the formula holds for some arbitrary N = k, i.e.
+k choose 3 = k (k - 1) (k - 2) / 6
+
+Induction Step:
+We must show that the formula holds for N = k + 1, i.e.
+k + 1 choose 3 = (k + 1) k (k - 1) / 6
+
+If we consider the set of k + 1 items, we can form triples in two ways,
+1. Choose 3 items from the first k items.
+2. Choose 2 items from the first k items, and the third item is the (k + 1)th item.
+
+Our induction hypothesis tells us that the first of these ways is given by
+k (k - 1) (k - 2) / 6
+
+The number of ways to choose two items from the first k items
+(the third item is predetermined, and doesn't add any variability)
+is given by k choose 2, which is equal to
+k (k - 1) / 2
+Therefore the number of ways to choose 3 items from k + 1 items is
+k + 1 choose 3 = k choose 3 + k choose 2
+
+Using the induction hypothesis and the binomial coefficient formula, we get
+k + 1 choose 3 = k (k - 1) (k - 2) / 6 + k (k - 1) / 2
+
+Simplifying this expression, we get
+k + 1 choose 3 = k (k - 1) (k - 2) / 6 + 3k (k - 1) / 6
+
+k + 1 choose 3 = k (k - 1) (k - 2) + 3k (k - 1) / 6
+
+k + 1 choose 3 = k^3 - 2k^2 - k^2 + 2k + 3k^2 - 3k / 6
+
+k + 1 choose 3 = k^3 - k / 6
+
+k + 1 choose 3 = k (k - 1) (k + 1) / 6
+
+Thus we have proven the formula holds for k + 1, and the hypothesis has been proven by induction.

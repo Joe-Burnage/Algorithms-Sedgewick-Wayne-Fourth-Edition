@@ -1,0 +1,97 @@
+Using the assumptions developed in the text, give the amount of
+needed to represent an object of each of the following types:
+a. Accumulator
+object overhead - 16 bytes
+int    n        - 4 bytes
+double sum      - 8 bytes
+double mu       - 8 bytes
+padding         - 4 bytes
+TOTAL           - 32 bytes
+
+b. Transaction
+object overhead - 16 bytes
+String who      - 8 bytes for reference
+String object   - 64 + 2x bytes
+-------------------------
+-------------------------
+object overhead         - 16 bytes
+reference to char array - 8 bytes
+int offset              - 4 bytes
+int count               - 4 bytes
+int hash code           - 4 bytes
+padding                 - 4 bytes
+
+char array
+object overhead         - 16 bytes
+int array size          - 4 bytes
+padding                 - 4 bytes
+x char values           - 2x bytes
+-------------------------
+-------------------------
+Date   when     - 8 bytes for reference
+Date object     - 32 bytes
+-------------------------
+object overhead         - 16 bytes
+int day                 - 4 bytes
+int month               - 4 bytes
+int year                - 4 bytes
+padding                 - 4 bytes
+-------------------------
+double amount   - 8 bytes
+TOTAL           - 136 + 2x bytes where x is the number of characters in the "who" string
+
+c. FixedCapacityStackOfStrings with capacity C and N entries
+object overhead         - 16 bytes
+String[] a              - 8 bytes for reference
+int N                   - 4 bytes
+padding                 - 4 bytes
+TOTAL                   - 32 bytes
+
+(including String array)
+String[C]               - 24 + 8C bytes (24 for overhead, 8 for each String object reference)
+SUBTOTAL                - 24 + 8C bytes
+RUNNING TOTAL           - 56 + 8C bytes
+
+(including String objects)
+object overhead         - 16 bytes
+reference to char array - 8 bytes
+int offset              - 4 bytes
+int count               - 4 bytes
+int hash code           - 4 bytes
+padding                 - 4 bytes
+SUBTOTAL                - 40 bytes per object
+RUNNING TOTAL           - 56 + 8C + 40N bytes
+
+(including String char arrays)
+object overhead         - 16 bytes
+int array size          - 4 bytes
+padding                 - 4 bytes
+x char values           - 2x bytes
+SUBTOTAL                - 24 + 2x bytes
+TOTAL                   - 56 + 8C + 64N + 2x bytes where C is the maximum capacity, N is the number of string entries, and x is the total number of characters contained within the strings.
+
+d. Point2D
+object overhead - 16 bytes
+double x        - 8 bytes
+double y        - 8 bytes
+TOTAL           - 32 bytes
+
+e. Interval1D
+object overhead - 16 bytes
+double min      - 8 bytes
+double max      - 8 bytes
+TOTAL           - 32 bytes
+
+f. Interval2D
+object overhead - 16 bytes
+Interval1D x    - 8 bytes for reference
+Interval1D object - 32 bytes
+Interval1D y    - 8 bytes for reference
+Interval1D object - 32 bytes
+TOTAL           - 96 bytes
+
+
+g. Double
+Object overhead - 16 bytes
+double value    - 8 bytes
+TOTAL           - 24 bytes

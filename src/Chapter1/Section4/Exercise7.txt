@@ -1,0 +1,8 @@
+Analyze ThreeSum under a cost model that counts arithmetic operations (and
+comparisons) involving the input numbers.
+
+Accounting for arithmetic operations and comparisons within the inner loop of ThreeSum
+(    if (a[i] + a[j] + a[k] == 0)    )
+
+We have two additions and a comparison. This gives us three operations each time
+we process the inner loop, leading to an approximation of ~N^3/2 operations.

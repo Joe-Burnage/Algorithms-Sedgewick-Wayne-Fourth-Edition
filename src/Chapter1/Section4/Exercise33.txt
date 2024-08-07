@@ -1,0 +1,68 @@
+Memory requirements on a 32-bit machine. Give the memory requirements
+for Integer, Date, Counter, int[], double[], double[][], String, Node, and Stack
+(linked-list representation) for a 32-bit machine. Assume that references are 4 bytes,
+object overhead is 8 bytes, and padding is to a multiple of 4 bytes.
+
+Integer
+Object overhead - 8 bytes
+int value       - 4 bytes
+TOTAL           - 12 bytes
+
+Date
+Object overhead - 8 bytes
+int day         - 4 bytes
+int month       - 4 bytes
+int year        - 4 bytes
+TOTAL           - 20 bytes
+
+Counter
+Object overhead - 8 bytes
+String reference - 4 bytes
+int count       - 4 bytes
+TOTAL           - 16 bytes
+
+int[]
+object overhead - 8 bytes
+int N           - 4 bytes
+N int values    - 4N bytes
+TOTAL           - 12 + 4N bytes
+
+double[]
+object overhead - 8 bytes
+int N           - 4 bytes
+N double values - 8N bytes
+TOTAL           - 12 + 8N bytes
+
+double[][]
+object overhead - 8 bytes
+int M           - 4 bytes
+M references    - 4M bytes
+TOTAL           - 12 + 4M (+ 12 + 8N)M bytes
+
+String
+object overhead - 8 bytes
+reference       - 4 bytes
+int offset      - 4 bytes
+int count       - 4 bytes
+int hash        - 4 bytes
+String object total - 24 bytes
+with char array
+object overhead - 8 bytes
+int N           - 4 bytes
+N char values   - 2N bytes
+Char array total - 12 + 2N bytes
+TOTAL           - 36 + 2N bytes
+
+Node
+object overhead - 8 bytes
+reference to enclosing instance - 4 bytes
+next reference  - 4 bytes
+item reference  - 4 bytes
+TOTAL           - 20 bytes
+
+Stack
+object overhead - 8 bytes
+Node reference  - 4 bytes
+int N           - 4 bytes
+N nodes         - 20N bytes
+TOTAL           - 16 + 20N bytes
